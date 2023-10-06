@@ -1,0 +1,335 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white; 
+  }
+  
+  body {
+    background-image: url('background.jpg');
+    background-size: cover; /* Adjust the image size to cover the entire div */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center center; /* Center the image within the div */
+    width: 100%; /* Make the div 100% wide to cover the viewport width */
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+  
+  /* Style the navigation bar */
+  header {
+    padding: 3% 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav li {
+    margin: 0;
+    margin-right: 5%;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative; /* Create relative positioning for the underline */
+    transition: color 0.3s;
+    margin-left: 2%;
+  }
+
+  
+  nav a::after {
+    content: ''; /* Create an underline effect */
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust the distance of the underline from text */
+    width: 100%;
+    height: 2px; /* Adjust the thickness of the underline */
+    background-color: #ffffff;
+    transform: scaleX(0); /* Initial scale for underline */
+    transform-origin: 0 0; /* Start the underline from the left */
+    transition: transform 0.3s;
+  }
+  
+  nav a:hover {
+    color: #ffffff;
+  }
+  
+  nav a:hover::after {
+    transform: scaleX(1); /* Show the underline on hover */
+  }
+
+  @media (max-width: 768px) {
+    nav .menu {
+        display: none;
+    }
+    nav .dropdown-menu {
+        display: block;
+    }
+    nav .menu-button {
+        display: block;
+        font-size: 24px; /* Adjust the size as needed */
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-left: 50px; 
+    }
+    nav .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #09e3ac;
+        min-width: 160px;
+        z-index: 1;
+    }
+    nav .dropdown-content a {
+        color: #fff;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+  
+}
+
+@media (min-width: 769px) {
+  nav .menu {
+      display: flex;
+  }
+  nav .dropdown-menu {
+      display: none;
+  }
+  nav .menu-button {
+      display: none;
+  }
+}
+
+
+/* Add this rule to hide the dropdown menu content by default and display it on button click */
+nav .menu-button:focus + .dropdown-content,
+nav .dropdown-content:focus-within {
+    display: block;
+}
+  
+  /* Style headings */
+  h1 {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 36px;
+    color: #09e3ac;
+    margin: 20px 0;
+  }
+  
+  h3 {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    color: #19eb94;
+  }
+  
+  /* Style content sections */
+  section {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style links in the content */
+  a {
+    color: #654ea3;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #dbabe0;
+  }
+  
+  #line1, #line2 {
+    text-align: center; /* Center the text */
+    color: white; /* Set the text color to white */
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  #line2 { 
+    font-size: 34px;
+  }
+  #line1 { 
+    font-size: 44px;
+  }
+
+  #banner {
+      margin-top: 80px;
+      margin-bottom: 80px;
+  }
+
+
+footer {
+text-align: center;
+padding: 10px; 
+}
+
+/* Style the project section */
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Style the project title */
+  .project .title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the project image */
+  .project .project-image {
+    text-align: center; /* Center the image horizontally */
+    margin-bottom: 10px;
+  }
+  
+  /* Style the project description */
+  .project .project-description {
+    text-align: center; /* Center the description horizontally */
+  
+  }
+
+.subtitles {
+    color: white; /* Set the text color to white */
+    border: 2px dotted white; /* White border for the h1 element */
+    display: inline-block; /* Make the h1 element an inline-block element */
+    padding: 2%; /* Add padding to the h1 element */
+    margin-bottom: 1%; /* Adjust margin as needed */
+    margin-left: 2%;
+    letter-spacing: 3px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .subtitles {
+        display: block; /* Change the display to block to make it centered */
+        text-align: center; /* Center the text within the block */
+        margin: 0 auto; /* Center the block horizontally using auto margins */
+    }
+}
+
+  #contact { 
+    margin-top: 3%;
+  }
+
+  #about { 
+    margin-top: 3%;
+  }
+
+#aboutlist ul  {
+    list-style-type: none;
+    padding: 10px 50px; 
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+a { 
+  color: #09e3ac;
+  padding-left: 70px;
+  font-size: 20px;
+}
+
+#fom {
+  padding-top: 50px; 
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Photo takes up 1/3, Description takes up 2/3 */
+  gap: 150px; /* Margin between the photo and description */
+margin-bottom: 70px;
+}
+
+.project-image {
+  grid-column: 1;
+}
+
+.project-description {
+  grid-column: 2;
+  text-align: left; /* Adjust text alignment to the left */
+  margin: 0; /* Remove the margin for the description */
+  padding: 10px; /* Add padding to the description for spacing */
+
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 300px;
+}
+
+.description {
+  padding: 30px;
+  background-color: #00176c; /* Light gray background for description */
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .project-content {
+      grid-template-columns: 1fr; /* Photo and description stack on small screens */
+      justify-items: center;
+      gap: 10px;
+    }
+
+  .project-image, .project-description {
+      grid-column: 1;
+  }
+
+  .photo { 
+  }
+}
+
+.title {
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+  justify-items: left;
+
+}
+
+/* Center the grid container on the page */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Create a grid container */
+.image-grid {
+  display: grid;
+  gap: 20px; /* Gap between grid items */
+}
+
+/* Style the grid images */
+.grid-image {
+  width: 50px; /* Set the width of each image */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 30px;
+}
+
+/* Add a media query for wide screens */
+@media screen and (min-width: 769px) {
+  /* Place the grid items on the left with a gap between them */
+  .image-grid {
+    justify-content: flex-start;
+    grid-template-columns: repeat(auto-fit, 50px); /* Adjust the width and columns for wide screens */
+  }
+}
+
+/* Add a media query for small/mobile screens */
+@media screen and (max-width: 768px) {
+  /* Center the grid items and make them smaller and inline */
+  .image-grid {
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  }
+
+  .grid-image {
+    width: 30px; /* Adjust the width for smaller screens */
+    margin-top: 15px; /* Adjust the margin for spacing */
+  }
+}

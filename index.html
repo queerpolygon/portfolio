@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Eloise Stark - Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+            <div class="dropdown-menu">
+                <button class="menu-button">&#9776;</button>
+                <ul class="dropdown-content">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <section id="banner">
+        <h1 id="line1"></h1>
+        <h1 id="line2"></h1>
+    
+        <script>
+            const line1 = "Hi!";
+            const line2 = "I'm Eloise Stark, a front-end developer.";
+            const line1Element = document.getElementById('line1');
+            const line2Element = document.getElementById('line2');
+            let charIndex1 = 0;
+            let charIndex2 = 0;
+    
+            function typeMessageLine1() {
+                if (charIndex1 < line1.length) {
+                    line1Element.innerHTML += line1.charAt(charIndex1);
+                    charIndex1++;
+                    setTimeout(typeMessageLine1, 100); // Adjust the typing speed for the first line
+                } else {
+                    typeMessageLine2(); // Start typing the second line
+                }
+            }
+    
+            function typeMessageLine2() {
+                if (charIndex2 < line2.length) {
+                    line2Element.innerHTML += line2.charAt(charIndex2);
+                    charIndex2++;
+                    setTimeout(typeMessageLine2, 50); // Adjust the typing speed for the second line
+                }
+            }
+    
+            typeMessageLine1(); // Start typing the first line
+        </script>
+    </section>
+
+    <section> 
+        <h2 class="subtitles"> Projects </h2>
+        
+        <div class="portfolio">
+            <div class="project">
+                <h3 class="title">Aristotle’s To-Do App</h3>
+                <div class="project-content">
+                    <div class="project-image">
+                        <img class="photo" src="project1.png" alt="Project 1 Photo">
+                    </div>
+                    <div class="project-description">
+                        <p class="description">
+                            This To-Do List application uses HTML, JavaScript, CSS, and React. It allows users to effortlessly manage their tasks, offering features such as task creation, editing, marking as complete, and removal. Additionally, I integrated a Random Quote Generator API to provide users with motivational or thought-provoking quotes, enhancing the overall user experience. The responsive design and polished interface make it an accessible and visually appealing app.
+                            <!-- Add the link below -->
+                            <a href="https://github.com/queerpolygon/ToDoList">See on Github</a>
+                        </p>
+                    </div>
+                </div>
+            </div>            
+            <div class="project">
+                <h3 class="title"> What’s Your DJ Name? </h3>
+                <div class="project-content">
+                    <div class="project-image">
+                        <img class="photo" src="project2.png" alt="Project 2 Photo">
+                    </div>
+                    <div class="project-description">
+                        <p class="description"> This fun and interactive web page uses Javascript to generate unique DJ names. Users can click a button to generate random DJ names instantly, and the stylish CSS design ensures an engaging and visually appealing user interface. 
+                            <a href="https://github.com/queerpolygon/DJName">See on Github</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <h3 class="title"> Power Bi Report - The Everything Company </h3>
+                <div class="project-content">
+                    <div class="project-image">
+                        <img class="photo" src="Project3.png" alt="Project 3 Photo">
+                    </div>
+                    <div class="project-description">
+                        <p class="description"> 
+                            In response to the urgent request from The Everything Company's Head of Finance, Hardik, I have developed a BI dashboard aimed at providing crucial insights into the company's product line performance. This dashboard, created using data analysis techniques, offers a comprehensive view of key performance indicators (KPIs) tailored to meet Hardik's specific objectives. It provides insights and recommendations to identify areas for potential improvement and cost-saving opportunities. 
+                     </p>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <h3 class="title"> Power Bi Report - Executive Summary </h3>
+                <div class="project-content">
+                    <div class="project-image">
+                        <img class="photo" src="project4.png" alt="Project 4 Photo">
+                    </div>
+                    <div class="project-description">
+                        <p class="description"> 
+                            I've created a concise report using the provided finance workbook, summarizing the company’s latest sales figures. The report highlights the most profitable month and year, the most successful countries/regions, and provides recommendations for product and segment investments. This data-driven report assists our decision-making process for continued success.                        </p>
+                    </div>
+                </div>
+            </div>
+
+        
+            <!-- Add more project elements as needed -->
+        </div>
+    </section>
+
+
+    <section id="about">
+        <h2 class="subtitles"> About Me </h2>
+    <li id="aboutlist">
+        <ul> &#9889 Tech stack: HTML, CSS, Javascript, React, Redux, Node.js  </ul>
+        <ul> &#9989 Front End Engineer certification from Codecademy </ul>
+        <ul> &#128395 Former journalist with excellent writing and communication skills </ul>
+        <ul> &#129504 Fast learner and problem solver </ul>
+        <ul> &#9978 Outdoors enthusiast and travel lover </ul>
+        <ul> <a id="fom" href="/about.html"> Find out more </a>
+       </li> 
+    </section>
+
+
+    <section id="contact">
+
+        <h2 class="subtitles"> Contact Me </h2>
+        
+
+<div class="image-grid">
+    <a href="https://github.com/queerpolygon/queerpolygon.github.io" class="image-link" target="_blank"><img src="github.png" alt="Github logo" class="grid-image"> </a>
+    <a href="mailto:eloise.stark0808@gmail.com" class="image-link" target="_blank"> <img src="email.png" alt="Email icon" class="grid-image"> </a>
+    <a href="https://www.linkedin.com/in/eloise-stark-7056a666/" class="image-link" target="_blank"><img src="linkedin.png" alt="LinkedIn logo" class="grid-image"> </a>
+</div>
+
+    </section>
+    <footer>
+        <p>&copy; 2023 Eloise Stark</p>
+    </footer>
+</body>
+</html>
+
